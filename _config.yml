@@ -3,3 +3,5 @@ description: "Personal website"
 theme: minima
 url: "https://mcavoyst.github.io/"
 baseurl: ""
+plugins:
+  - jekyll-seo-tag

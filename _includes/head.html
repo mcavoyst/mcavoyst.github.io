@@ -13,3 +13,18 @@
 
 <!-- Optional: your CSS -->
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+<script>
+  // Initialize theme before page loads to prevent flash
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+<script>
+  function toggleTheme() {
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }
+</script>

@@ -1,0 +1,145 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #2c3e50;
+  --accent-color: #3498db;
+  --nav-hover: #2980b9;
+  --border-color: #eee;
+  --secondary-bg: #f8f9fa;
+  --secondary-text: #666;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1f2937;
+  --text-color: #e5e7eb;
+  --accent-color: #60a5fa;
+  --nav-hover: #93c5fd;
+  --border-color: #374151;
+  --secondary-bg: #111827;
+  --secondary-text: #9ca3af;
+}
+
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+nav {
+  padding: 1rem 0;
+}
+
+.site-nav {
+  margin-bottom: 3rem;
+}
+
+nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #0366d6;
+}
+
+.nav-link {
+  margin-right: 1.5rem;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  padding: 4rem 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+h2 {
+  color: var(--text-color);
+  margin-top: 2rem;
+}
+
+h3 {
+  color: var(--text-color);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--nav-hover);
+  text-decoration: underline;
+}
+
+.content {
+  margin: 2rem 0;
+  background-color: var(--bg-color);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 0.5rem 0;
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--secondary-text);
+}
+
+.theme-switch {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  background: var(--secondary-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.project-card {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: var(--secondary-bg);
+}
+
+.article-list {
+  list-style: none;
+  padding: 0;
+}
+
+.article-list li {
+  margin-bottom: 2rem;
+}
+
+.article-date {
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+}
