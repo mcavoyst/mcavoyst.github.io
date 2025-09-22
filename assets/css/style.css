@@ -109,17 +109,31 @@ footer {
 
 .theme-switch {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.5rem;
-  border-radius: 50%;
-  border: none;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.75rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border-color);
   background: var(--secondary-bg);
   color: var(--text-color);
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.theme-switch:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.theme-switch .icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  display: inline-block;
 }
 
 .project-card {

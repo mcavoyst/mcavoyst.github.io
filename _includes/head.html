@@ -13,7 +13,7 @@
 
 <!-- Optional: your CSS -->
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-
+<!-- <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"> -->
 <script>
   // Initialize theme before page loads to prevent flash
   (function() {
@@ -23,8 +23,31 @@
 </script>
 <script>
   function toggleTheme() {
-    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const theme = isDark ? 'light' : 'dark';
+    const icon = document.querySelector('[data-theme-icon]');
+    
+    // Start transition
+    icon.style.transform = 'rotate(360deg)';
+    
+    // Update theme
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
+    
+    // Update icon
+    setTimeout(() => {
+      icon.textContent = isDark ? '☀️' : '🌙';
+      icon.style.transform = 'rotate(0)';
+    }, 150);
   }
+
+  // Initialize theme
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    const icon = document.querySelector('[data-theme-icon]');
+    if (icon) {
+      icon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+    }
+  })();
 </script>
