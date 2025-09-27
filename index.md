@@ -5,7 +5,7 @@ title: "Welcome"
 
 # Hi, I'm Steven McAvoy 👋
 
-I'm an engineer and public servant at the **Ontario government**. 
+I'm an engineer and public servant. 
 
 ## What I Do 💡
 
